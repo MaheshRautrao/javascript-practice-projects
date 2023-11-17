@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #343a40;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container > .input > input {
+  height: 35px;
+  width: 240px;
+  padding: 5px 20px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#myNumberInput::-webkit-outer-spin-button,
+#myNumberInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button > button {
+  padding: 5px 20px;
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+.button > button:hover {
+  background-color: black;
+  color: white;
+}
+
+.result {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+}
