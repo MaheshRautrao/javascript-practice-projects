@@ -2,9 +2,11 @@ const heightInput = document.querySelector("#heightInput");
 const weightInput = document.querySelector("#weightInput");
 const button = document.querySelector(".button");
 const outputBox = document.querySelector("#output");
+const categoryBox = document.querySelector("#category");
 
-function updateUI(output) {
+function updateUI(output, category) {
   outputBox.innerHTML = output;
+  categoryBox.innerHTML = category;
 }
 
 const inputHandler = () => {
@@ -21,7 +23,23 @@ const inputHandler = () => {
   }
 
   const bmi = weight / (height * height);
-  updateUI(bmi.toFixed(2));
+  const bmiIndex = bmi.toFixed(2);
+  let category;
+
+  switch (bmiIndex) {
+    case bmiIndex < 18.5:
+      category = "Underweight";
+      break;
+    case bmiIndex >= 18.5 || bmiIndex <= 24.9:
+      category = "Healthy weight";
+      break;
+    case bmiIndex >= 25.0 || bmiIndex <= 29.9:
+      category = "Overweight";
+      break;
+    default:
+      category = "Obesity";
+  }
+  updateUI(bmiIndex, category);
 };
 
 button.addEventListener("click", inputHandler);

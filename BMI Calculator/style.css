@@ -57,5 +57,11 @@ body {
   border-radius: 3px;
   padding: 5px 10px;
   display: flex;
+  flex-direction: column;
   gap: 10px;
+}
+
+.bmi_index_box {
+  display: flex;
+  flex-direction: row;
 }
