@@ -32,8 +32,8 @@ body {
   border-radius: 5px;
 }
 
-#myNumberInput::-webkit-outer-spin-button,
-#myNumberInput::-webkit-inner-spin-button {
+.myNumberInput::-webkit-outer-spin-button,
+.myNumberInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
