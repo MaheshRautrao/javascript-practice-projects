@@ -1,10 +1,13 @@
 const heightInput = document.querySelector("#heightInput");
 const weightInput = document.querySelector("#weightInput");
 const button = document.querySelector(".button");
+
+const resultBox = document.querySelector(".result");
 const outputBox = document.querySelector("#output");
 const categoryBox = document.querySelector("#category");
 
 function updateUI(output, category) {
+  resultBox.style.display = "flex";
   outputBox.innerHTML = output;
   categoryBox.innerHTML = category;
 }
